@@ -4,7 +4,8 @@ import androidx.compose.runtime.Composable
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.kawaki.weather.screens.HomeScreen
+import com.kawaki.weather.screens.home.HomeScreen
+import com.kawaki.weather.screens.search.AboutScreen
 
 @Composable
 fun WeatherAppNavigation() {
@@ -14,6 +15,9 @@ fun WeatherAppNavigation() {
     NavHost(navController = navHostController, startDestination = NavScreens.HomeScreen.route) {
         composable(NavScreens.HomeScreen.route) {
             HomeScreen(navHostController = navHostController)
+        }
+        composable(NavScreens.AboutScreen.route) {
+            AboutScreen(navHostController = navHostController)
         }
     }
 }
