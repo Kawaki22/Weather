@@ -3,10 +3,10 @@ package com.kawaki.weather
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.toArgb
-import androidx.compose.ui.platform.LocalView
-import androidx.core.view.WindowCompat
 import com.kawaki.weather.navigation.WeatherAppNavigation
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -15,10 +15,10 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            val view = LocalView.current
-            WindowCompat.setDecorFitsSystemWindows(window, false)
-            window.statusBarColor = Utils.customBlue.toArgb()
-            window.navigationBarColor = Utils.customBlue.toArgb()
+//                val view = LocalView.current
+//                WindowCompat.setDecorFitsSystemWindows(window, false)
+                    window.statusBarColor = if (isSystemInDarkTheme()) Utils.customBlack.toArgb() else Color.White.toArgb()
+                    window.navigationBarColor = if (isSystemInDarkTheme()) Utils.customBlack.toArgb() else Color.White.toArgb()
 //            WeatherTheme {
                     WeatherApp()
 //            }

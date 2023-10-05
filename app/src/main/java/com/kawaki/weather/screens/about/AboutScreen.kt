@@ -1,8 +1,9 @@
-package com.kawaki.weather.screens.search
+package com.kawaki.weather.screens.about
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.ScrollState
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
@@ -26,22 +27,22 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavHostController
 import com.kawaki.weather.R
-import com.kawaki.weather.Utils
 import com.kawaki.weather.components.BottomBar
-import com.kawaki.weather.screens.home.HomeScreenViewModel
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun AboutScreen(navHostController: NavHostController, viewModel: HomeScreenViewModel = hiltViewModel()) {
+fun AboutScreen(navHostController: NavHostController) {
 
-        val uriHandler = LocalUriHandler.current
-        Scaffold(modifier = Modifier.fillMaxSize(),
-            topBar = {  },
-            bottomBar = { BottomBar(navHostController = navHostController) },
-            containerColor = Utils.customBlue) { innerPadding ->
+    val dynamicTextColor = if (isSystemInDarkTheme()) Color.White else Color.Black
+    val dynamicScaffoldColor = if (isSystemInDarkTheme()) Color.Black else Color.White
+
+    val uriHandler = LocalUriHandler.current
+    Scaffold(modifier = Modifier.fillMaxSize(),
+        topBar = {  },
+        bottomBar = { BottomBar(navHostController = navHostController) },
+        containerColor = dynamicScaffoldColor) { innerPadding ->
 
             Column(modifier = Modifier
                 .padding(innerPadding)
@@ -54,14 +55,14 @@ fun AboutScreen(navHostController: NavHostController, viewModel: HomeScreenViewM
                 //AppBar
 
                 Image(painter = painterResource(id = R.drawable.about_pic), contentDescription = "Pic")
-                Text(modifier = Modifier.padding(bottom = 20.dp), text = "This app is powered by the OpenWeather API and crafted with Android Jetpack Compose, is your go-to source for real-time weather updates. With Room Database integration, this app empower you to save your favorite locations and weather data anytime. Built with the modern MVVM (Model-View-ViewModel) architecture. Enjoy a beautifully designed interface, while having the flexibility to switch between light and dark modes.", style = TextStyle(fontSize = 14.sp, fontWeight = FontWeight.Normal, color = Color.White, textAlign = TextAlign.Center))
+                Text(modifier = Modifier.padding(bottom = 20.dp), text = "This app is powered by the OpenWeather API and crafted with Android Jetpack Compose, is your go-to source for real-time weather updates. With Room Database integration, this app empower you to save your favorite locations and weather data anytime. Built with the modern MVVM (Model-View-ViewModel) architecture. Enjoy a beautifully designed interface, while having the flexibility to switch between light and dark modes.", style = TextStyle(fontSize = 14.sp, fontWeight = FontWeight.Normal, color = dynamicTextColor, textAlign = TextAlign.Center))
                 Image(modifier = Modifier
                     .width(100.dp)
                     .height(50.dp)
                     .clickable { uriHandler.openUri("https://github.com/Kawaki22/") },
-                    painter = painterResource(id = R.drawable.github), contentDescription = "GitHub", colorFilter = ColorFilter.tint(Color.White))
+                    painter = painterResource(id = R.drawable.github), contentDescription = "GitHub", colorFilter = if (isSystemInDarkTheme()) ColorFilter.tint(Color.White) else ColorFilter.tint(Color.Black))
 
-                Spacer(modifier = Modifier.height(20.dp))
+            Spacer(modifier = Modifier.height(20.dp))
             }
         }
 }
