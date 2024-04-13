@@ -6,10 +6,10 @@
 
 <div align="center">
 <div>
-<img src="https://github.com/prasidhanchan/Weather/assets/92362239/9f7b531c-691f-43fa-a1c4-30a8415c3d08" width="40%" /> <!-- Home -->
-<img src="https://github.com/prasidhanchan/Weather/assets/92362239/5c8fa8c6-cedd-4f1a-b965-9faa2b6fe9e2" width="40%" /> <!-- Search -->
-<img src="https://github.com/prasidhanchan/Weather/assets/92362239/9be3d3e0-ab76-4dd5-ad8b-bb43257e4db4" width="40%" /> <!-- Home -->
-<img src="https://github.com/prasidhanchan/Weather/assets/92362239/c6871790-1eca-40e9-85fc-d30ee60da47d" width="40%" /> <!-- Search -->
+<img src="https://github.com/prasidhanchan/Weather/assets/92362239/9f7b531c-691f-43fa-a1c4-30a8415c3d08" width="35%" /> <!-- Home -->
+<img src="https://github.com/prasidhanchan/Weather/assets/92362239/5c8fa8c6-cedd-4f1a-b965-9faa2b6fe9e2" width="35%" /> <!-- Search -->
+<img src="https://github.com/prasidhanchan/Weather/assets/92362239/9be3d3e0-ab76-4dd5-ad8b-bb43257e4db4" width="35%" /> <!-- Home -->
+<img src="https://github.com/prasidhanchan/Weather/assets/92362239/c6871790-1eca-40e9-85fc-d30ee60da47d" width="35%" /> <!-- Search -->
 </div>
 </div>
 
