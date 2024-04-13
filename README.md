@@ -10,6 +10,7 @@
 <img src="https://github.com/prasidhanchan/Weather/assets/92362239/3c11fdae-981a-44e8-8dc6-6d69c012cbe3" width="40%" />
 <img src="https://github.com/prasidhanchan/Weather/assets/92362239/9be3d3e0-ab76-4dd5-ad8b-bb43257e4db4" width="40%" />
 <img src="https://github.com/prasidhanchan/Weather/assets/92362239/c6871790-1eca-40e9-85fc-d30ee60da47d" width="40%" />
+<img src="https://github.com/prasidhanchan/Weather/assets/92362239/9be3d3e0-ab76-4dd5-ad8b-bb43257e4db4" width="40%" />
 </div>
 </div>
 
